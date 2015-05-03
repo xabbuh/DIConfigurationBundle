@@ -1,0 +1,26 @@
+parameters:
+    kernel.default_locale: en
+
+services:
+    app.request_stack:
+        class: CustomRequestStack
+    locale_listener:
+        class: LocaleListener
+        arguments:
+            - %kernel.default_locale%
+            - @router
+            - @request_stack
+    monolog.logger:
+        class: AppLogger
+    router:
+        class: Router
+    request_stack:
+        class: RequestStack
+
+xabbuh_di_configuration:
+    monolog.logger: CustomLogger
+    locale_listener:
+        arguments:
+            - de
+            - index: 2
+              value: @app.request_stack

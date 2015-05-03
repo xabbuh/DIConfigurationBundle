@@ -1,0 +1,35 @@
+{
+    "name": "xabbuh/di-configuration-bundle",
+    "type": "symfony-bundle",
+    "description": "Override Symfony service definition configuration with ease",
+    "keywords": ["Symfony", "DI", "dependency injection", "service container", "configuration", "customisation", "customization"],
+    "homepage": "https://github.com/xabbuh/DIConfigurationBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Flothmann",
+            "homepage": "https://github.com/xabbuh"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Xabbuh\\DIConfigurationBundle\\": "" }
+    },
+    "autoload-dev": {
+        "files": ["Tests/Functional/services.php"]
+    },
+    "require": {
+        "php": ">=5.3",
+        "symfony/config": "~2.3",
+        "symfony/dependency-injection": "~2.3",
+        "symfony/http-kernel": "~2.3"
+    },
+    "require-dev": {
+       "matthiasnoback/symfony-dependency-injection-test": "~0.7",
+        "symfony/framework-bundle": "~2.3"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    }
+}
